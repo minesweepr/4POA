@@ -7,7 +7,6 @@ public class Agenda{
 		try(BufferedWriter bw=new BufferedWriter(new FileWriter(arq, true))){
 			bw.write(nome+";"+telefone);
 			bw.newLine();
-			bw.close();
 			System.out.println("contato adicionado com sucesso.");
 		}catch(IOException e){
 			e.printStackTrace();
