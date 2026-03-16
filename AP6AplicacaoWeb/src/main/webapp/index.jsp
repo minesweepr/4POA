@@ -3,11 +3,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>POAFilmes</title>
+<link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    
+
+<nav> 
+    <h1> AP6 - POA Filmes </h1> 
+    <span id="feitores"> por Isabela De Oliveira Athayde e Gabriela Da Costa Castro</span> 
+</nav>   
+
 <form action="CadastraServlet" method="post">
+    <h1>Cadastro de Filmes</h1>
+    
     <h2>Nome do Filme:</h2>
     <input type="text" name="nome" id="nome">
 
