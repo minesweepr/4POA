@@ -12,27 +12,43 @@
 <body>
 
 <nav> 
-    <h1> AP6 - POA Filmes </h1> 
+    <h1><a href="../index.jsp"> AP6 - POA Filmes</a> </h1> 
     <span id="feitores"> por Isabela De Oliveira Athayde e Gabriela Da Costa Castro</span> 
 </nav> 
 
 <section class="filme-container">
 
-    <h2>Título: <%=filme.getNome() %></h2>
+    <section class="item">
+		<h2>Título: </h2><p><%=filme.getNome() %></p>
+	</section>
+    
+    <hr>
 
-    <h4>Ano de Lançamento: <u><%=filme.getAnoLancamento() %></u></h4>
+    <section class="item">
+		<h4>Ano de Lançamento:</h4> <p><%=filme.getAnoLancamento() %></p>
+	</section>
 
-    <h4>Dirigido por: <u><%=filme.getDiretor() %></u></h4>
+    <section class="item">
+		<h4>Gênero: </h4> <p><%=filme.getGenero() %></p>
+	</section>
 
-    <h4>Tempo de duração: <%=filme.getDuracao() %> mins</h4>
-
-    <h4>Gênero: <%=filme.getGenero() %></h4>
-
-    <h4>Sinopse: <%=filme.getSinpose() %></h4>
+    <section class="item">
+		<h4>Sinopse:</h4> <p><%=filme.getSinopse() %></p>
+	</section>
+    
+    <section class="item">
+		<h4>Tempo de duração: </h4> <p><%=filme.getDuracao() %> mins</p>
+	</section>
+    
+    <section class="item">
+		<h4>Dirigido por:</h4> <p> <%=filme.getDiretor() %></p>
+	</section>
 
     <hr>
 
-    <h4>Onde Assistir: <%=String.join(", ", filme.getPlataformas()) %>.</h4>
+    <section class="item">
+		<h4>Onde Assistir: </h4> <p><%=String.join(", ", filme.getPlataformas()) %>.</p>
+	</section>
 
 </section>
 

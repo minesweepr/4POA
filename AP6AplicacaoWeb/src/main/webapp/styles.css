@@ -27,6 +27,8 @@ body {
     font-family: var(--fonte-principal);
     background-color: var(--cor-fundo-tela);
     color: var(--cor-texto);
+    
+    overflow-x: hidden;
 }
 
 nav {
@@ -52,6 +54,11 @@ nav h1 {
 
     margin: 0;
 
+}
+
+nav h1 a {
+	 text-decoration: none;
+    color: white;
 }
 
 #feitores {
@@ -150,11 +157,9 @@ input[type="submit"]:hover {
     color: var(--cor-texto);
 }
 
-/* ========================= */
-/* EXIBIÇÃO DO FILME */
-/* ========================= */
+/* do resultado.jsp*/
 
-.filme-container{
+.filme-container {
     max-width: 1000px;
     margin: 70px auto;
     padding: 35px;
@@ -164,21 +169,33 @@ input[type="submit"]:hover {
     border-radius: 10px;
 
     text-align: left;
+
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
-.filme-container h2{
-    margin-top: 0;
-    font-size: 30px;
+section.item {
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
-.filme-container h4{
-    font-size: 20px;
-    font-weight: normal;
-    margin: 8px 0;
-    line-height: 1.5;
+.item h4,
+.item h2 {
+    margin: 0;
+    color: #d6d6d6;
+    min-width: 180px; 
 }
 
-.filme-container hr{
+.item p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.filme-container hr {
     border: none;
     height: 1px;
     background-color: var(--cor-neon);

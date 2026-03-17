@@ -5,18 +5,18 @@ public class Filme{
 	private int anoLancamento;
 	private int duracao;
 	private String genero;
-	private String sinpose;
+	private String sinopse;
 	private String[] plataformas;
 	private String diretor;
 	
 	public Filme(String nome, int anoLancamento, int duracao, String genero, 
-			     String sinpose, String[] plataformas, String diretor){
+			     String sinopse, String[] plataformas, String diretor){
 		super();
 		this.nome=nome;
 		this.anoLancamento=anoLancamento;
 		this.duracao=duracao;
 		this.genero=genero;
-		this.sinpose=sinpose;
+		this.sinopse=sinopse;
 		this.plataformas=plataformas;
 		this.diretor=diretor;
 	}
@@ -33,8 +33,8 @@ public class Filme{
 	public String getGenero(){return genero;}
 	public void setGenero(String genero){this.genero=genero;}
 
-	public String getSinpose(){return sinpose;}
-	public void setSinpose(String sinpose){this.sinpose=sinpose;}
+	public String getSinopse(){return sinopse;}
+	public void setSinopse(String sinopse){this.sinopse=sinopse;}
 
 	public String[] getPlataformas(){return plataformas;}
 	public void setPlataformas(String[] plataformas){this.plataformas=plataformas;}
