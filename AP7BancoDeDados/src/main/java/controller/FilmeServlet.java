@@ -36,6 +36,6 @@ public class FilmeServlet extends HttpServlet {
         FilmeCRUD crud = new FilmeCRUD();
         crud.inserir(f);
 
-        response.sendRedirect("index.html");
+        response.sendRedirect("index.jsp");
     }
 }

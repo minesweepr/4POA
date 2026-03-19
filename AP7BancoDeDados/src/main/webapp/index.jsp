@@ -1,14 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="crud.FilmeCRUD" %>
+<%@ page import="model.Filme" %>
+<%@ page import="java.util.List" %>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>AP7 POAFilmes</title>
+<title>Lista de Filmes</title>
 <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
-
 <nav>
 
     <h1><a href="index.jsp">AP7 POAFilmes</a></h1>
@@ -19,22 +21,38 @@
 
 </nav>
 
-<section class="filme-container">
 
-	<h2>Bem-vindo ao POAFilmes</h1>	
+
+<section class="filme-container">
+	<h1>Filmes Cadastrados</h1>
 	
-   <section class="flexBtn">
+	<section id="lista-filmes ">
+	
+		<%
+		FilmeCRUD crud = new FilmeCRUD();
+		List<Filme> lista = crud.listar();
 		
-		<a class="btn" href="cadastrarFilmes.jsp">
-			Cadastrar Filme
+		if(lista.isEmpty()){
+		%>
+		    <p>Nenhum filme cadastrado</p>
+		<%
+		}else{
+		    for(Filme f : lista){
+		%>
+		
+		<a class="filme-item" href="listarUm.jsp?id=<%=f.getId()%>">
+		    <%=f.getNome()%>
 		</a>
 		
-		<a class="btn" href="listarFilmes.jsp">
-			Meus Filmes
-		</a>
+		<%
+		    }
+		}
+		%>
+		
 	</section>
 	
-</section>
+	<a class="btn" href="cadastrarFilmes.jsp">Cadastrar novo</a>
+	</section>
 
 </body>
 </html>
